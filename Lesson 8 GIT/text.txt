@@ -4,8 +4,5 @@
 44
 123
 3355
-<<<<<<< HEAD
 Я здесь txt!
-=======
 I am here GIT!
->>>>>>> 0a0edfec24902b6dd0dbf894df3eb7500791fe30
