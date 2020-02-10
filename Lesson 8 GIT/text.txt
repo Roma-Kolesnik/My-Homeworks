@@ -7,3 +7,5 @@
 Я здесь txt!
 I am here GIT!
 master
+Git
+PC
