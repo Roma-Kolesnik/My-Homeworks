@@ -127,8 +127,8 @@ echo "</pre>";
 $arr = ['Example_or_check'];
 function ss ($mass){
 	foreach($mass as $str)
-	foreach(count_chars($str, 1) as $letter => $quantity) {
-		echo "\"" , chr($letter) , "\" встречается в строке $quantity раз.\n". "<br>";
+	foreach(count_chars($str, 1) as $letter => $quantity) { //count_chars - Возвращает информацию о символах, входящих в строку 1-массив, индексами которого являются ASCII-коды, а значениями - число вхождений соответствующего символа.
+		echo "\"" , chr($letter) , "\" встречается в строке $quantity раз.\n". "<br>"; //chr - Генерирует односимвольную строку по заданному числу
 	}
 }
 

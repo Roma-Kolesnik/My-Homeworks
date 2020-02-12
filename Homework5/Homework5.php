@@ -74,38 +74,29 @@ allName("Ivanov","Ivan", "Petrovich");
 
 $myCity = "Nickopol";
 
-function cityes($city)
+function cityes($myCity)
 {
-    $arr = ['Kharkov', 'Kiev', 'Voronezh', 'Zhitomir', 'Romny', 'Nickopol', 'Lvov', 'Volgograd', 'Donetsk', 'Kalyga',
-        'Ahtyrka', 'Aleksandriya', 'Yalta', 'Arhangelsk', 'Kremenchyk', 'Gadych', 'Cherkasy', 'Summy', 'Meletopol', 'London'];
-    echo "<pre>";
-    print_r($arr);
-    echo "</pre>";
-    echo "<br>";
+    $arr = ['kharkov', 'kiev', 'voronezh', 'zhitomir', 'romny', 'nickopol', 'lvov', 'volgograd', 'donetsk', 'kalyga',
+        'ahtyrka', 'aleksandriya', 'yalta', 'arhangelsk', 'kremenchyk', 'gadych', 'cherkasy', 'summy', 'meletopol', 'london'];
+    dd($arr);
+    $endLatter = substr($myCity, -1); // Последняя буква города
+    global $myCity;
+    echo "<strong> Your city: </strong>" . $myCity . "<br>";
 
-    $a = $city;
-    $endLatter = substr($city, -1);
-    $result = strtolower($endLatter);
-    //echo $result;
-    if ($result == "y") {
-        $i = strlen($a) - 2;
-        $last = ($a[$i]);
-        $up = mb_strtoupper($last);
-        foreach ($arr as $key => $cityes) {
-            echo strstr($cityes, $up);
-            unset($arr[$key]);
-            break;
-        }
-    } else {
-        $up2 = mb_strtoupper($result);
-        foreach ($arr as $keys => $cityess) {
-            echo strstr($cityess, $up2);
-
+    foreach ($arr as $keyCity => $city){
+        if ($endLatter == $city[0]){
+            echo $city . '<br>';
+            $endLatter = substr($city, -1);
+            unset($arr[$keyCity]);
         }
     }
+   dd($arr);
 }
 
 cityes($myCity);
+
+
+
 
 
 function dd($arr)
@@ -114,9 +105,6 @@ function dd($arr)
     print_r($arr);
     echo "</pre>";
 }
-
-
-
 
 
 #6 Первый уровень
@@ -156,34 +144,6 @@ function fun($number){
 
 fun(100);
 */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 ?>
