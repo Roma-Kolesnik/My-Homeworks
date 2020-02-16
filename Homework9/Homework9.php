@@ -1,8 +1,8 @@
 <?php
 
 
-
-function dd ($arr){
+function dd($arr)
+{
     echo "<pre>";
     print_r($arr);
     echo "</pre>";
@@ -38,8 +38,6 @@ function summa2 ($str){
 }
     summa2($number);
 */
-
-
 
 
 /*
@@ -271,7 +269,6 @@ function maxMin ($array){
 }
 maxMin($mass);
 */
-
 
 
 ?>
