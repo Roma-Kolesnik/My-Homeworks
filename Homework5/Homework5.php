@@ -72,6 +72,7 @@ allName("Ivanov","Ivan", "Petrovich");
 
 #5
 
+/*
 $myCity = "Nickopol";
 
 function cityes($myCity)
@@ -94,7 +95,7 @@ function cityes($myCity)
 }
 
 cityes($myCity);
-
+*/
 
 
 
@@ -146,8 +147,11 @@ fun(100);
 */
 
 
-?>
 
+
+
+
+?>
 
 
 
