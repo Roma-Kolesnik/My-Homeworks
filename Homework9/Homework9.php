@@ -190,6 +190,20 @@ function maxMin ($array){
         ($countMin % 10 == 1 && $countMin % 100 != 11?
             "Минимальное число $b в массиве повторяется $countMin раз" :
             "Минимальное число $b в массиве повторяется $countMin раз");
+
+    echo "<br>  <br>";
+
+    for($u = 0; $u < $count; $u++){
+        for($t = $u + 1; $t < $count; $t++){
+            if($array[$u] > $array[$t]){
+                $r = $array[$t];
+                $array[$t] = $array[$u];
+                $array[$u] = $r;
+            }
+        }
+    }
+    echo "Массив отсортирован:" . "<br>";
+    dd($array);
 }
 maxMin($mass);
 */
@@ -266,10 +280,44 @@ function maxMin ($array){
         ($countMin % 10 == 1 && $countMin % 100 != 11?
             "Минимальное число $b в массиве повторяется $countMin раз" :
             "Минимальное число $b в массиве повторяется $countMin раз");
+
+    echo "<br>  <br>";
+
+    $u = 0;
+    while($u < $count) {
+        $t = $u + 1;
+        while ($t < $count) {
+            if ($array[$u] > $array[$t]) {
+                $r = $array[$t];
+                $array[$t] = $array[$u];
+                $array[$u] = $r;
+            }
+            $t++;
+        }
+        $u++;
+    }
+    echo "Массив отсортирован:" . "<br>";
+    dd($array);
 }
 maxMin($mass);
 */
 //---------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ?>
 
