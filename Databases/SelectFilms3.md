@@ -1,3 +1,3 @@
-```
+```sql
 select names as FILM, group_concat(distinct actor_name order by actor_name asc separator ', ') as ACTORS, group_concat(distinct dir_name order by dir_name asc separator ', ') as DIRECTORS, group_concat(distinct prod_name order by prod_name asc separator ', ') as PRODUCERS from films inner join actors on (films.id = actors.actor_id) inner join directors on (films.id = directors.dir_id) inner join producers on (films.id = producers.prod_id) group by films.names;
 ```
